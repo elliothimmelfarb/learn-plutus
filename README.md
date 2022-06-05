@@ -21,4 +21,9 @@ Resources and my steps for becoming a Plutus blockchain developer
 - [PlutusTx Haddock](https://playground.plutus.iohkdev.io/doc/haddock/plutus-tx/html/PlutusTx.html)
 
 ### Plutus Pioneers Program
-- [Full Program](https://github.com/input-output-hk/plutus-pioneer-program)
+- [Program repo](https://github.com/input-output-hk/plutus-pioneer-program)
+- [Plutus Apps repo](https://github.com/input-output-hk/plutus-apps)
+
+#### Environment Setup
+- [Setup Nix on MacOs](https://nixos.org/download.html#nix-install-macos)
+- [set up the IOHK binary caches (#1)](https://github.com/input-output-hk/plutus#how-to-set-up-the-iohk-binary-caches)
