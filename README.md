@@ -28,6 +28,9 @@ Resources and my steps for becoming a Plutus blockchain developer
 - [Setup Nix on MacOs](https://nixos.org/download.html#nix-install-macos)
 - [Set up the IOHK binary caches (#1)](https://github.com/input-output-hk/plutus#how-to-set-up-the-iohk-binary-caches)
 
+#### Start the Playground
+1. Launch 2 `nix-shell`s in `plutus-apps` repository
+
 #### Useful nix-shell commands
 
 Haddock Docs:
