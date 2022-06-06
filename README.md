@@ -29,7 +29,13 @@ Resources and my steps for becoming a Plutus blockchain developer
 - [Set up the IOHK binary caches (#1)](https://github.com/input-output-hk/plutus#how-to-set-up-the-iohk-binary-caches)
 
 #### Start the Playground
-1. Launch 2 `nix-shell`s in `plutus-apps` repository
+1. Checkout `plutus-apps` repository at required commit
+2. Enter `nix-shell`
+3. Run `cabal build plutus-pab` as described [here](https://github.com/input-output-hk/plutus-apps/#how-to-build-the-haskell-packages-with-cabal)
+4. Navigate to `./plutus-playground-client`
+5. Run `plutus-playground-server`
+6. Launch 2nd `nix-shell` in `plutus-apps` repository and navigate to `./plutus-playground-client`
+7. Run 'npm start'. May need to run `npm install` first
 
 #### Useful nix-shell commands
 
