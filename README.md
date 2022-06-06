@@ -3,6 +3,7 @@ Resources and my steps for becoming a Plutus blockchain developer
 
 
 ## Learn Haskell
+- [Haskell and Crypto Mongolia 2020](https://www.youtube.com/playlist?list=PLJ3w5xyG4JWmBVIigNBytJhvSSfZZzfTm)
 - [Learn you a Haskell for Great Good Book (Online)](http://learnyouahaskell.com/chapters)
 - Haskell Cheat Sheets:
   - [alhassy/HaskellCheatSheet](https://github.com/alhassy/HaskellCheatSheet)
