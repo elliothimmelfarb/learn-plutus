@@ -35,7 +35,7 @@ Resources and my steps for becoming a Plutus blockchain developer
 4. Navigate to `./plutus-playground-client`
 5. Run `plutus-playground-server`
 6. Launch 2nd `nix-shell` in `plutus-apps` repository and navigate to `./plutus-playground-client`
-7. Run 'npm start'. May need to run `npm install` first
+7. Run `npm start`. May need to run `npm install` first
 
 #### Useful nix-shell commands
 
