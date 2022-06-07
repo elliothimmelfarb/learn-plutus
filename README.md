@@ -45,6 +45,7 @@ Resources and my steps for becoming a Plutus blockchain developer
 4. `import Data.Default`
 5. `import Ledger.TimeSlot`
 6. `slotToEndPOSIXTime def [slot count]`
+10 slots = 1596059101999
 
 #### Useful nix-shell commands
 
