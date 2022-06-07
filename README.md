@@ -38,6 +38,14 @@ Resources and my steps for becoming a Plutus blockchain developer
 6. Launch 2nd `nix-shell` in `plutus-apps` repository and navigate to `./plutus-playground-client`
 7. Run `npm start`. 
 
+#### Calculate posix time from slot
+1. Enter `nix-shell` from `plutus-apps`. 
+2. Navigate to `plutus-pioneer-program` repo and go into week directory.
+3. Enter `cabal repl`
+4. `import Data.Default`
+5. `import Ledger.TimeSlot`
+6. `slotToEndPOSIXTime def [slot count]`
+
 #### Useful nix-shell commands
 
 Haddock Docs:
