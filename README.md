@@ -31,12 +31,17 @@ Resources and my steps for becoming a Plutus blockchain developer
 
 #### Start the Playground
 1. Checkout `plutus-apps` repository at required commit
-2. Enter `nix-shell`
-3. Run `cabal build plutus-pab` as described [here](https://github.com/input-output-hk/plutus-apps/#how-to-build-the-haskell-packages-with-cabal)
-4. Navigate to `./plutus-playground-client`
-5. Run `plutus-playground-server`
-6. Launch 2nd `nix-shell` in `plutus-apps` repository and navigate to `./plutus-playground-client`
-7. Run `npm start`. 
+2. Enter `nix-shell` with `GC_DONT_GC=1 nix-shell` to disable garbage collection
+3. Maybe `nix-build -A plutus-playground.client`
+4. Maybe `nix-build -A plutus-playground.server`
+5. Maybe `nix-build -A plutus-playground.start-backend`
+6. Maybe `cabal build plutus-pab` as described [here](https://github.com/input-output-hk/plutus-apps/#how-to-build-the-haskell-packages-with-cabal)
+7. Navigate to `./plutus-playground-client`
+8. Run `plutus-playground-server`
+9. Launch 2nd `nix-shell` in `plutus-apps` repository and navigate to `./plutus-playground-client`
+10. Run `npm start`. 
+- [Solve /bin/plutus-playground-server: No such file or directory](https://issuemode.com/issues/input-output-hk/plutus-apps/42168502)
+- [MacOS Plutus Playground Build - Instructions (datad but useful)](https://www.reddit.com/r/cardano/comments/mmzut6/macos_plutus_playground_build_instructions/)
 
 #### Calculate posix time from slot
 1. Enter `nix-shell` from `plutus-apps`. 
@@ -53,3 +58,6 @@ Haddock Docs:
 ```bash 
 $ build-and-serve-docs
 ```
+
+## Cardano Ecosystem
+- [Essential Cardano List](https://github.com/input-output-hk/essential-cardano/blob/main/essential-cardano-list.md)
