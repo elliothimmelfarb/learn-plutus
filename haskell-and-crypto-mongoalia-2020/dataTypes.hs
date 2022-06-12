@@ -18,3 +18,7 @@ ifThenElse' :: Bool -> p -> p -> p
 ifThenElse' c t e
   | c = t
   | otherwise = e
+
+fromMaybe :: a -> Maybe a -> a
+fromMaybe def Nothing = def
+fromMaybe _ (Just a) = a
