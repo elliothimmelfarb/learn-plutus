@@ -8,3 +8,13 @@ not' False' = True'
 (||) :: Bool -> Bool -> Bool
 False || c = c
 True || _ = True
+
+ifThenElse :: Bool -> a -> a -> a
+ifThenElse True t e = t
+ifThenElse False t e = e
+
+-- ifThenElse with guards
+ifThenElse' :: Bool -> p -> p -> p
+ifThenElse' c t e
+  | c = t
+  | otherwise = e
