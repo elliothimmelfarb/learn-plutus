@@ -13,6 +13,7 @@ Resources and my steps for becoming a Plutus blockchain developer
   - [My Solutions](https://github.com/elliothimmelfarb/exercism-haskell)
 - [code.world/haskell](https://code.world/haskell)
 - [Hoogle](https://hoogle.haskell.org/)
+- [Prelude Hackage Page](https://hackage.haskell.org/package/base-4.16.1.0/docs/Prelude.html)
 
 ### Environment Setup:
 - [Setup Haskell with GHCUp](https://www.haskell.org/ghcup/)
