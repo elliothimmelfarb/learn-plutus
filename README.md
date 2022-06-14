@@ -69,3 +69,4 @@ $ build-and-serve-docs
 ## Cardano Ecosystem
 - [Essential Cardano List](https://github.com/input-output-hk/essential-cardano/blob/main/essential-cardano-list.md)
 - [Essential Cardano Content](https://github.com/input-output-hk/essential-cardano-content)
+- [Weekly Cardano Development Updates](https://github.com/input-output-hk/essential-cardano-content/tree/main/content/development-update)
