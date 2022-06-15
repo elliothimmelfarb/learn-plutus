@@ -19,6 +19,7 @@ ifThenElse' c t e
   | c = t
   | otherwise = e
 
+{-- Maybe -}
 fromMaybe :: a -> Maybe a -> a
 fromMaybe def Nothing = def
 fromMaybe _ (Just a) = a
@@ -34,3 +35,11 @@ addMaybes _ _ = Nothing
 mapMaybe :: (a -> b) -> Maybe a -> Maybe b
 mapMaybe f (Just a) = Just (f a)
 mapMaybe _ Nothing = Nothing
+
+liftMaybe :: (a -> b -> c) -> Maybe a -> Maybe b -> Maybe c
+liftMaybe f (Just a) (Just b) = Just (f a b)
+liftMaybe _ _ _ = Nothing
+
+{-- Pairs -}
+swap' :: (a, b) -> (b, a)
+swap' (a, b) = (b, a)
