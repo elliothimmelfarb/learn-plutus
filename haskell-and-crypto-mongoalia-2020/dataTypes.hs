@@ -26,3 +26,7 @@ fromMaybe _ (Just a) = a
 orElse :: Maybe a -> Maybe a -> Maybe a
 orElse Nothing a = a
 orElse (Just a) _ = Just a
+
+addMaybes :: Maybe Int -> Maybe Int -> Maybe Int
+addMaybes (Just a) (Just b) = Just (a + a)
+addMaybes _ _ = Nothing
