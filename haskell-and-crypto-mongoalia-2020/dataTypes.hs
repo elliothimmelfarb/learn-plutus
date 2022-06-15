@@ -30,3 +30,7 @@ orElse (Just a) _ = Just a
 addMaybes :: Maybe Int -> Maybe Int -> Maybe Int
 addMaybes (Just a) (Just b) = Just (a + a)
 addMaybes _ _ = Nothing
+
+mapMaybe :: (a -> b) -> Maybe a -> Maybe b
+mapMaybe f (Just a) = Just (f a)
+mapMaybe _ Nothing = Nothing
