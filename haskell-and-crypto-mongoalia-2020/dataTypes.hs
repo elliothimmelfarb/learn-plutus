@@ -22,3 +22,8 @@ ifThenElse' c t e
 fromMaybe :: a -> Maybe a -> a
 fromMaybe def Nothing = def
 fromMaybe _ (Just a) = a
+
+orElse :: Maybe a -> Maybe a -> Maybe a
+orElse Nothing a = a
+orElse a Nothing = a
+orElse (Just a) _ = Just a
