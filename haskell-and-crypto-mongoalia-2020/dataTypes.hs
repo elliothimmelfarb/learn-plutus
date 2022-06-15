@@ -43,3 +43,9 @@ liftMaybe _ _ _ = Nothing
 {-- Pairs -}
 swap' :: (a, b) -> (b, a)
 swap' (a, b) = (b, a)
+
+foo :: (Int, Int) -> Int
+foo (a, b) = a + b
+
+curry' :: ((a, b) -> c) -> a -> b -> c
+curry' f a b = f (a, b)
