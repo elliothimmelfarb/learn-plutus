@@ -5,9 +5,9 @@ not' True' = False'
 not' False' = True'
 
 -- Since there are overlaps with Prelude "||" you can acccess this with "Main.||" in ghci
-(||) :: Bool -> Bool -> Bool
-False || c = c
-True || _ = True
+(||||) :: Bool -> Bool -> Bool
+False |||| c = c
+True |||| _ = True
 
 ifThenElse :: Bool -> a -> a -> a
 ifThenElse True t e = t
@@ -54,3 +54,7 @@ curry' f a b = f (a, b)
 
 length' :: [a] -> Int
 length' = foldr (\x -> (+) 1) 0
+
+elem' :: Eq a => a -> [a] -> Bool
+elem' _ [] = False
+elem' x (y : ys) = x == y || elem x ys
