@@ -49,3 +49,8 @@ foo (a, b) = a + b
 
 curry' :: ((a, b) -> c) -> a -> b -> c
 curry' f a b = f (a, b)
+
+{-- Lists -}
+
+length' :: [a] -> Int
+length' = foldr (\x -> (+) 1) 0
