@@ -62,3 +62,11 @@ elem' x (y : ys) = x == y || elem x ys
 append :: [a] -> [a] -> [a]
 [] `append` ys = ys
 (x : xs) `append` ys = x : (xs `append` ys)
+
+head' :: [a] -> Maybe a
+head' [] = Nothing
+head' (x : ys) = Just x
+
+tail' :: [a] -> Maybe [a]
+tail' [] = Nothing
+tail' (x : xs) = Just xs
