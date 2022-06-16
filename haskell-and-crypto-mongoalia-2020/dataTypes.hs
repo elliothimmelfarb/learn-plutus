@@ -74,3 +74,9 @@ tail' (x : xs) = Just xs
 reverse' :: [a] -> [a]
 reverse' [] = []
 reverse' (x : xs) = reverse' xs ++ [x]
+
+filter' :: (a -> Bool) -> [a] -> [a]
+filter' _ [] = []
+filter' p (x : xs)
+  | p x = x : filter' p xs
+  | otherwise = filter' p xs
