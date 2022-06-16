@@ -70,3 +70,7 @@ head' (x : ys) = Just x
 tail' :: [a] -> Maybe [a]
 tail' [] = Nothing
 tail' (x : xs) = Just xs
+
+reverse' :: [a] -> [a]
+reverse' [] = []
+reverse' (x : xs) = reverse' xs ++ [x]
