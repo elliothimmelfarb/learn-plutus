@@ -58,3 +58,7 @@ length' = foldr (\x -> (+) 1) 0
 elem' :: Eq a => a -> [a] -> Bool
 elem' _ [] = False
 elem' x (y : ys) = x == y || elem x ys
+
+append :: [a] -> [a] -> [a]
+[] `append` ys = ys
+(x : xs) `append` ys = x : (xs `append` ys)
