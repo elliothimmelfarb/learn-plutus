@@ -88,8 +88,9 @@ $ build-and-serve-docs
 - [Marlowe Docs](https://marlowe-playground-staging.plutus.aws.iohkdev.io/doc/marlowe/tutorials/index.html)
 - [Marlowe Playground](https://marlowe-playground-staging.plutus.aws.iohkdev.io/#/)
 
-## Cardano Ecosystem
+## Cardano
 
 - [Essential Cardano List](https://github.com/input-output-hk/essential-cardano/blob/main/essential-cardano-list.md)
 - [Essential Cardano Content](https://github.com/input-output-hk/essential-cardano-content)
 - [Weekly Cardano Development Updates](https://github.com/input-output-hk/essential-cardano-content/tree/main/content/development-update)
+- [Understanding Cardano Extended-UTXO](https://forum.cardano.org/t/understanding-cardano-extended-utxo/101509)
