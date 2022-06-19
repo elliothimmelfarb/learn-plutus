@@ -98,4 +98,4 @@ delete k ((k', v) : t)
   | otherwise = (k', v) : delete k t
 
 delete' :: Eq k => k -> Table k v -> Table k v
-delete' k = filter (\(k', _) -> k' /= k)
+delete' k = filter (\kv -> k /= fst kv)
