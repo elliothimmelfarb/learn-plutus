@@ -90,3 +90,12 @@ empty = []
 
 insert :: k -> v -> Table k v -> Table k v
 insert k v t = (k, v) : t
+
+delete :: Eq k => k -> Table k v -> Table k v
+delete k [] = []
+delete k ((k', v) : t)
+  | k == k' = delete k t
+  | otherwise = (k', v) : delete k t
+
+delete' :: Eq k => k -> Table k v -> Table k v
+delete' k = filter (\(k', _) -> k' /= k)
