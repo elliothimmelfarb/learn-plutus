@@ -80,3 +80,13 @@ filter' _ [] = []
 filter' p (x : xs)
   | p x = x : filter' p xs
   | otherwise = filter' p xs
+
+{- Lookup Tables-}
+
+type Table k v = [(k, v)]
+
+empty :: Table k v
+empty = []
+
+insert :: k -> v -> Table k v -> Table k v
+insert k v t = (k, v) : t
