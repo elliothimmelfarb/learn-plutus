@@ -99,3 +99,9 @@ delete k ((k', v) : t)
 
 delete' :: Eq k => k -> Table k v -> Table k v
 delete' k = filter (\kv -> k /= fst kv)
+
+lookup' :: Eq k => k -> Table k v -> Maybe v
+lookup' _ [] = Nothing
+lookup' k ((k', v) : kvs)
+  | k == k' = Just v
+  | otherwise = lookup' k kvs
