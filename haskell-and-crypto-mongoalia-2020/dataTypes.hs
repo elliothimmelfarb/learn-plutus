@@ -88,8 +88,8 @@ type Table k v = [(k, v)]
 empty :: Table k v
 empty = []
 
-insert :: k -> v -> Table k v -> Table k v
-insert k v t = (k, v) : t
+insert :: Eq k => k -> v -> Table k v -> Table k v
+insert k v t = (k, v) : filter (\(k', _) -> k' /= k) t
 
 delete :: Eq k => k -> Table k v -> Table k v
 delete k [] = []
