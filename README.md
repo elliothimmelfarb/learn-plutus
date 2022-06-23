@@ -93,6 +93,7 @@ $ build-and-serve-docs
 - [Essential Cardano List](https://github.com/input-output-hk/essential-cardano/blob/main/essential-cardano-list.md)
 - [Essential Cardano Content](https://github.com/input-output-hk/essential-cardano-content)
 - [Weekly Cardano Development Updates](https://github.com/input-output-hk/essential-cardano-content/tree/main/content/development-update)
+- [Cardano Developer Portal](https://developers.cardano.org/)
 
 ### Cardano Forums Finds
 - [Understanding Cardano Extended-UTXO](https://forum.cardano.org/t/understanding-cardano-extended-utxo/101509)
