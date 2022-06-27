@@ -132,3 +132,14 @@ data Transaction' = Transaction'
     tr'To :: Account
   }
   deriving (Eq, Show)
+
+type Accounts = Table Account Amount
+
+processTransaction :: Transaction' -> Accounts -> Accounts
+processTransaction tx a =
+  let from = tr'From tx
+      to = tr'To tx
+      amount = tr'Amount tx
+      fOld = fromMaybe 0 (lookup from a)
+      tOld = fromMaybe 0 (lookup to a)
+   in insert from (fOld - amount) (insert to (tOld + amount) a)
