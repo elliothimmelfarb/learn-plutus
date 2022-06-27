@@ -108,13 +108,12 @@ lookup' k ((k', v) : kvs)
 
 {- Transactions -}
 
-data Transaction = Transaction Amount Account Account deriving (Eq, Show)
-
 type Amount = Int
 
 type Account = String
 
--- Transaction :: Amount -> Account -> Account -> Transaction
+data Transaction = Transaction Amount Account Account
+  deriving (Eq, Show)
 
 trAmount :: Transaction -> Amount
 trAmount (Transaction a _ _) = a
@@ -124,3 +123,12 @@ trFrom (Transaction _ a _) = a
 
 trTo :: Transaction -> Account
 trTo (Transaction _ _ a) = a
+
+{- Record Syntax -}
+
+data Transaction' = Transaction'
+  { tr'Amount :: Amount,
+    tr'From :: Account,
+    tr'To :: Account
+  }
+  deriving (Eq, Show)
