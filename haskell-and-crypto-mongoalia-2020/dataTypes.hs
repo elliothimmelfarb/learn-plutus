@@ -143,7 +143,7 @@ processTransaction Transaction' {tr'From = f, tr'To = t, tr'Amount = x} a =
 
 {- Binary Trees -}
 
-data Tree a = Leaf a | Node (Tree a) (Tree a)
+data Tree a = Leaf a | Node (Tree a) (Tree a) deriving (Show)
 
 flatten :: Tree a -> [a]
 flatten (Leaf x) = [x]
