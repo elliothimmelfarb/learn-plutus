@@ -136,10 +136,7 @@ data Transaction' = Transaction'
 type Accounts = Table Account Amount
 
 processTransaction :: Transaction' -> Accounts -> Accounts
-processTransaction tx a =
-  let from = tr'From tx
-      to = tr'To tx
-      amount = tr'Amount tx
-      fOld = fromMaybe 0 (lookup from a)
-      tOld = fromMaybe 0 (lookup to a)
-   in insert from (fOld - amount) (insert to (tOld + amount) a)
+processTransaction Transaction' {tr'From = f, tr'To = t, tr'Amount = x} a =
+  let fOld = fromMaybe 0 (lookup f a)
+      tOld = fromMaybe 0 (lookup t a)
+   in insert f (fOld - x) (insert t (tOld + x) a)
