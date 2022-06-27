@@ -140,3 +140,11 @@ processTransaction Transaction' {tr'From = f, tr'To = t, tr'Amount = x} a =
   let fOld = fromMaybe 0 (lookup f a)
       tOld = fromMaybe 0 (lookup t a)
    in insert f (fOld - x) (insert t (tOld + x) a)
+
+{- Binary Trees -}
+
+data Tree a = Leaf a | Node (Tree a) (Tree a)
+
+flatten :: Tree a -> [a]
+flatten (Leaf x) = [x]
+flatten (Node l r) = flatten l ++ flatten r
