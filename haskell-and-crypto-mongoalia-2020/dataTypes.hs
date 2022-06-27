@@ -105,3 +105,22 @@ lookup' _ [] = Nothing
 lookup' k ((k', v) : kvs)
   | k == k' = Just v
   | otherwise = lookup' k kvs
+
+{- Transactions -}
+
+data Transaction = Transaction Amount Account Account deriving (Eq, Show)
+
+type Amount = Int
+
+type Account = String
+
+-- Transaction :: Amount -> Account -> Account -> Transaction
+
+trAmount :: Transaction -> Amount
+trAmount (Transaction a _ _) = a
+
+trFrom :: Transaction -> Account
+trFrom (Transaction _ a _) = a
+
+trTo :: Transaction -> Account
+trTo (Transaction _ _ a) = a
