@@ -152,3 +152,27 @@ flatten (Node l r) = flatten l ++ flatten r
 height :: Tree a -> Int
 height (Leaf _) = 0
 height (Node l r) = 1 + max (height l) (height r)
+
+{- Expressions -}
+
+data Expr
+  = Lit Int
+  | Add Expr Expr
+  | Neg Expr
+  | IfZero Expr Expr Expr
+  deriving (Show)
+
+expr1 :: Expr
+expr1 =
+  IfZero
+    (Add (Lit 3) (Neg (Lit 3)))
+    (Lit 42)
+    (Add (Lit 1) (Lit 2))
+
+eval :: Expr -> Int
+eval (Lit x) = x
+eval (Neg x) = - eval x
+eval (Add x y) = eval x + eval y
+eval (IfZero x y z)
+  | eval x == 0 = eval y
+  | otherwise = eval z
