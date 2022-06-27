@@ -12,3 +12,19 @@
 - `type` gives a new name to an existing data type.
 - `newtype` is similar to `data` but it only works for data types that have exactly 1 constructor with exactly 1 argument.
 - [`newtype` on Haskell Wiki](https://wiki.haskell.org/Newtype)
+
+### Record Syntax
+
+- Labels output from `Show`
+- Allows usage of named constructor arguments which removes importance of order of argument
+- Self documenting
+- Get accessor functions for free
+- Get record update syntax:
+
+```ghci
+*Main> let tx1 = Transaction' 100 "me" "you"
+*Main> tx1
+Transaction' {tr'Amount = 100, tr'From = "me", tr'To = "you"}
+*Main> tx1 {tr'To = "them", tr'Amount = 50}
+Transaction' {tr'Amount = 50, tr'From = "me", tr'To = "them"}
+```
