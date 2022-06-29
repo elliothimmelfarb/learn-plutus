@@ -35,3 +35,5 @@ Transaction' {tr'Amount = 50, tr'From = "me", tr'To = "them"}
   - use `Maybe` and `Nothing` for this instead
 - Only used for development if you want something to compile by filling holes but you are not complete with it yet.
 - `undefined` will often crash production code at run time but it will often enable compiling
+- `undefined` is uncheckable. Does not behave or is not ueseful in the way other languages use `undefined` or `null`
+- `Maybe` forces you to always handle a `Nothing` case. You cannot proceed without checking for "null"
