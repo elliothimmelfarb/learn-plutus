@@ -34,3 +34,4 @@ Transaction' {tr'Amount = 50, tr'From = "me", tr'To = "them"}
 - Never used for empty or non-values
   - use `Maybe` and `Nothing` for this instead
 - Only used for development if you want something to compile by filling holes but you are not complete with it yet.
+- `undefined` will often crash production code at run time but it will often enable compiling
