@@ -1,6 +1,8 @@
 # Haskell and Crypto Mongolia 2022
 
-[YouTube Location of Course](https://www.youtube.com/playlist?list=PLJ3w5xyG4JWmBVIigNBytJhvSSfZZzfTm)
+[Repository](https://github.com/iohkedu/haskell-2020)
+
+[YouTube Playlist](https://www.youtube.com/playlist?list=PLJ3w5xyG4JWmBVIigNBytJhvSSfZZzfTm)
 
 # Notes
 
