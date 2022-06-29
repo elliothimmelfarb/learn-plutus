@@ -37,3 +37,9 @@ Transaction' {tr'Amount = 50, tr'From = "me", tr'To = "them"}
 - `undefined` will often crash production code at run time but it will often enable compiling
 - `undefined` is uncheckable. Does not behave or is not ueseful in the way other languages use `undefined` or `null`
 - `Maybe` forces you to always handle a `Nothing` case. You cannot proceed without checking for "null"
+
+### Memory Leaks
+
+- Haskell is garbage collected
+- By means of laziness, you can end up taking up more memory than you need.
+- With nested expressions you can end up hanging onto values and execution for longer than you might expect.
